@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	var color = 'white';
 	var colors = 'red green blue yellow white';
+	var paint = false;
 
 	$('.box').on('click', function() {
 		$(this).addClass(color);
@@ -9,6 +10,26 @@ $(document).ready(function() {
 	$('.box').on('dblclick', function() {
 		$(this).removeClass(colors);
 	})
+
+	$('.box')
+		.mouseup(function() {
+			var endpainting = paint;
+			paint = false;
+			console.log(paint)
+
+			
+		})
+		.mousedown(function() {
+			paint = true;
+				$('.box').mouseenter(function() {
+					if(paint) {
+						$(this).addClass(color);
+						console.log(paint)
+					}
+					
+				})
+			})
+	
 
 	$('#reset').on('click', function() {
 		$('.box').removeClass(colors)
@@ -33,5 +54,7 @@ $(document).ready(function() {
 	$('#white').on('click', function() {
 		color = 'white';
 	})
+
+
 
 })
