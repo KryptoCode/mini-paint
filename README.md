@@ -1,6 +1,6 @@
 # Understanding jQuery - Paint
 
-![Alt text](mini-paint/mini-paint.png?raw=true "Screenshot")
+![Alt text](mini-paint.png?raw=true "Screenshot")
 
 
 This project will help us better understand basic DOM manipulation by creating a paint program! Much like Microsoft Paint.
